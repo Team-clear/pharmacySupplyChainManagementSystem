@@ -3,9 +3,12 @@ import NavbarOne from '../components/NavbarOne';
 import Footer from '../components/Footer';
 import ResultCard from '../components/ResultCard';
 import { Center, Grid, Container, SimpleGrid, Group, Image, Text, Button, Accordion, Card, Stack } from '@mantine/core';
-
+import { useNavigate } from 'react-router';
 
 const ProductDetails = () => {
+  
+  const navigate = useNavigate();
+  
   return (
     <main>
       <div className='main'>

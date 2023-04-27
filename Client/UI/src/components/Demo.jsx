@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 import { copy, linkIcon, loader, tick } from "../assets";
+import { useNavigate } from "react-router";
 
 const Demo = () => {
+  const navigate = useNavigate();
   return (
     <section className='mt-16 w-full max-w-xl'>
       {/* Search */}
@@ -25,6 +27,7 @@ const Demo = () => {
           <button
             type='submit'
             className='submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700 '
+            onClick={() => navigate(`/searchresults`) }
           >
             <p>↵</p>
           </button>

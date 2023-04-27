@@ -1,8 +1,10 @@
 import React from 'react'
 
 import { Card, Image, Text, Badge, Button, Group, Avatar } from '@mantine/core';
+import { useNavigate } from 'react-router';
 
 const ResultCard = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <Card shadow="sm" padding="lg" radius="md" withBorder>
@@ -36,7 +38,9 @@ const ResultCard = () => {
 
 
 
-                <Button variant="light" color="green" fullWidth mt="md" radius="md">
+                <Button variant="light" color="green" fullWidth mt="md" radius="md"
+                onClick={() => navigate(`/productdetails`) }
+                >
                     View Offer
                 </Button>
             </Card>
