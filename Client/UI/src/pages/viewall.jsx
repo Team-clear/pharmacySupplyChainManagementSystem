@@ -10,35 +10,18 @@ import { Box, Typography } from "@mui/material";
 import { Navigate } from "react-router";
 import { useNavigate } from "react-router";
 
-const SearchResults = () => {
+const allMeds = () => {
   const [medicine, setMedicine] = useState([]);
   const [loading, setloading] = useState(false);
   const [Title, setTitle] = useState("");
   const [pharmacy, setPharmacy] = useState("");
   const location = useLocation();
-  const [searchedMed, _] = useContext(medContext);
+
   const navigate = useNavigate();
-  console.log(searchedMed);
 
   useEffect(() => {
     returnMedicines();
   }, []);
-
-  async function searchMedicine() {
-    setloading(true);
-    let res = await fetch(
-      //`http://13.40.153.119/searchMedicine?Title=${}&City=${}`,
-
-      `http://localhost:8045/searchMedicine?Title=${Title}&City=${pharmacy}`,
-      {
-        method: "GET",
-        headers: { "Content-type": "application/json" },
-      }
-    );
-    let med = await res.json();
-    //setMedicine(med);
-    setloading(false);
-  }
 
   async function returnMedicines() {
     let res = await fetch("http://localhost:8045/allMedicines", {
@@ -66,7 +49,7 @@ const SearchResults = () => {
         <Container>
           <Center maw={1100} mx="auto" pt={30}>
             <SimpleGrid cols={3}>
-              {searchedMed.length == 0 ? (
+              {medicine.length == 0 ? (
                 <div
                   style={{
                     height: "60vh",
@@ -84,7 +67,7 @@ const SearchResults = () => {
                   </div>
                 </div>
               ) : (
-                searchedMed.map((c) => {
+                medicine.map((c) => {
                   return <ResultCard Title={c.Title} pharmacy={c.City} />;
                 })
               )}
@@ -98,4 +81,4 @@ const SearchResults = () => {
   );
 };
 
-export default SearchResults;
+export default allMeds;
