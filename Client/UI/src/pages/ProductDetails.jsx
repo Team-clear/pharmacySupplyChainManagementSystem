@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 const ProductDetails = () => {
   
   const navigate = useNavigate();
-  
+
   return (
     <main>
       <div className='main'>
@@ -27,6 +27,8 @@ const ProductDetails = () => {
 
       <Center maw={1100} pt={30} pb={10} mx="auto">
         <Grid cols={2} mx="auto">
+
+        
 
           <Grid.Col span={5}>
             <Card miw={240} mih={240} withBorder>
