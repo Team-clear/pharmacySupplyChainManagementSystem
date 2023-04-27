@@ -53,7 +53,7 @@
     radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
     radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
     radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+    radial-gradient(at 79% 53%, #eea5ba 0px, transparent 50%);
   position: absolute;
   content: "";
   width: 100%;
@@ -79,12 +79,20 @@
   @apply rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black;
 }
 
+.green_btn {
+  @apply rounded-full border border-green-600 bg-green-600 py-2.5 px-10 text-sm text-white transition-all hover:bg-green-600 hover:text-white;
+}
+
 .head_text {
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
 }
 
+.sub_head_text {
+  @apply mt-3  font-extrabold leading-[1.15] text-black sm:text-4xl text-center;
+}
+
 .orange_gradient {
-  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-lime-500 via-green-700 to-lime-500 bg-clip-text text-transparent;
 }
 
 .desc {

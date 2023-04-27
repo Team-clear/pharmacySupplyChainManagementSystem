@@ -20,12 +20,15 @@ const Hero = () => {
       </nav>
 
       <h1 className='head_text'>
-        Summarize Articles with <br className='max-md:hidden' />
-        <span className='orange_gradient '>OpenAI GPT-4</span>
+        medical supplies <br className='max-md:hidden' />
+        <span className='orange_gradient '>Management system</span>
       </h1>
       <h2 className='desc'>
-        Simplify your reading with Summize, an open-source article summarizer
-        that transforms lengthy articles into clear and concise summaries
+      Welcome an online system for Health centers and pharmacies to order medicines and equipment from their suppliers. The system provides a convenient and efficient way to purchase and ensure that they always have the medications with the best offer possible.
+      </h2>
+      <br/>
+      <h2 className='desc'>
+            what are you looking for?
       </h2>
     </header>
   );

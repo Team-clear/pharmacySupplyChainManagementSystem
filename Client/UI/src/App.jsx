@@ -1,20 +1,20 @@
-import Hero from "./components/Hero";
-import Demo from "./components/Demo";
+import { Routes, Route, BrowserRouter, Outlet, Link } from "react-router-dom";
 
-import "./App.css";
+// import pages
+import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
+import SearchResults from "./pages/SearchResults";
+import "./App.css"
 
 const App = () => {
   return (
-    <main>
-      <div className='main'>
-        <div className='gradient' />
-      </div>
-
-      <div className='app'>
-        <Hero />
-        <Demo />
-      </div>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/productdetails" element={<ProductDetails />} />
+        <Route path="/searchresults" element={<SearchResults />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
