@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from '../components/navbar';
+import NavbarOne from '../components/NavbarOne';
+import Footer from '../components/Footer';
 import ResultCard from '../components/ResultCard';
 import { Center, Grid, Container, SimpleGrid } from '@mantine/core';
 
@@ -12,7 +13,7 @@ const SearchResults = () => {
       </div>
 
       <div className='app'>
-        <Navbar />
+        <NavbarOne />
         <Center>
           <h1 className='sub_head_text'>
             Search Results for:<br className='max-md:hidden' />
@@ -21,8 +22,8 @@ const SearchResults = () => {
         <Container>
           <Center maw={1100} mx="auto" pt={30}>
             <SimpleGrid cols={3}>
-              <ResultCard />  
-              <ResultCard />  
+              <ResultCard />
+              <ResultCard />
               <ResultCard />
               <ResultCard />
               <ResultCard />
@@ -30,6 +31,8 @@ const SearchResults = () => {
           </Center>
         </Container>
       </div>
+
+      <Footer />
     </main>
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from '../components/Hero'
-import Navbar from '../components/navbar'
+import NavbarOne from '../components/NavbarOne';
+import Footer from '../components/Footer';
 import ResultCard from '../components/ResultCard';
 import { Center, Grid, Container, SimpleGrid, Group, Image, Text, Button, Accordion, Card, Stack } from '@mantine/core';
 
@@ -13,7 +13,7 @@ const ProductDetails = () => {
       </div>
 
       <div className='app'>
-        <Navbar />
+        <NavbarOne />
       </div>
 
       <Center>
@@ -133,6 +133,7 @@ const ProductDetails = () => {
       </Center>
 
 
+      <Footer />
     </main>
   )
 }
