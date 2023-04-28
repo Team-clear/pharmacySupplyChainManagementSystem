@@ -32,7 +32,7 @@ const ResultCard = (props) => {
         </Group>
 
         <Button
-          variant="light"
+           variant="outline"
           color="green"
           fullWidth
           mt="md"

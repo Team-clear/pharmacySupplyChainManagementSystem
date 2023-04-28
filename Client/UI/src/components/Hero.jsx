@@ -1,7 +1,8 @@
 import React from "react";
 import TypewriterComponent from "typewriter-effect";
 import { logo, MediFlow } from "../assets";
-import { Box, Typography, Button } from "@mui/material";
+import { Button } from "@mantine/core";
+import { Box, Typography } from "@mui/material";
 import { useNavigate } from "react-router";
 
 
@@ -13,26 +14,17 @@ const Hero = () => {
         <img src={MediFlow} alt='sumz_logo' className='w-28 object-contain' />
 
         <Box display="flex" justifyContent="space-between">
-          <button
-            type="button"
-            onClick={() =>
-              window.open(
-                "https://github.com/Team-clear/pharmacySupplyChainManagementSystem",
-                "_blank"
-              )
-            }
-            // className="black_btn"
-          >
-            GitHub
-          </button>
-
           <Box color="dark" paddingLeft="5%">
-            <Button
-              style={{
-                color: "black",
-
-                borderRadius: "35%",
+            <Button variant="subtle" color="dark" radius="xl"
+              onClick={() => {
+                navigate("/");
               }}
+            >
+              Search
+            </Button>
+          </Box>
+          <Box color="dark" paddingLeft="5%" marginRight="10%">
+            <Button variant="subtle" color="dark" radius="xl"
               onClick={() => {
                 navigate("/product");
               }}
@@ -40,6 +32,19 @@ const Hero = () => {
               All
             </Button>
           </Box>
+          <button
+            type="button"
+
+            onClick={() =>
+              window.open(
+                "https://github.com/Team-clear/pharmacySupplyChainManagementSystem",
+                "_blank"
+              )
+            }
+            className="black_btn"
+          >
+            GitHub
+          </button>
         </Box>
       </nav>
 
@@ -54,7 +59,6 @@ const Hero = () => {
               "Welcome an online system for Health centers and pharmacies to order medicines and equipment from their suppliers.",
             ],
             autoStart: true,
-            loop: true,
           }}
         />
 
@@ -66,8 +70,6 @@ const Hero = () => {
       <h2 className="desc">
         <Typography variant="h4">What are you looking for?</Typography>
       </h2>
-
-      <Button>Find here</Button>
     </header>
   );
 };

@@ -51,57 +51,44 @@ const Demo = () => {
     <section className="mt-16 w-full max-w-xl">
       {/* Search */}
       <div className="flex flex-col w-full gap-2">
-        <Box component="form" onSubmit={searchMedicine} Validate sx={{ mt: 1 }}>
-          <Box
-            style={{
-              backgroundColor: "#fffeff",
-              padding: "7%",
-              borderRadius: "4px",
+
+        <form
+          className='relative flex justify-center items-center'
+          onSubmit={searchMedicine}
+        >
+
+
+          <input
+            type='text'
+            value={medicine}
+            onChange={(e) => {
+              setMedicine(e.target.value);
             }}
+            autoFocus
+            required
+            className='url_input peer' // When you need to style an element based on the state of a sibling element, mark the sibling with the peer class, and use peer-* modifiers to style the target element
+          />
+          <button
+            type='submit'
+            className='submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700 '
           >
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
-                <Grid container spacing={1}>
-                  <Grid item xs={12} md={12}>
-                    <FormControl sx={{ mt: 0, minWidth: "100%" }}>
-                      <TextField
-                        fullWidth
-                        required
-                        margin="normal"
-                        id="medicine"
-                        label="MEDICINE"
-                        name="medicine"
-                        type="text"
-                        value={medicine}
-                        onChange={(e) => {
-                          setMedicine(e.target.value);
-                        }}
-                        autoFocus
-                      />
-                    </FormControl>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Box paddingTop="9%">
-                  <button
-                    style={{
-                      backgroundColor: "green",
-                      color: "white",
-                      borderRadius: "4px",
-                      padding: "5%",
-                      paddingLeft: "10%",
-                      paddingRight: "10%",
-                    }}
-                    // className={styles.btnSearch}
-                  >
-                    Search
-                  </button>
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
+            <img
+              src={linkIcon}
+              alt='link-icon'
+              className='absolute left-0 my-2 ml-3 w-5'
+            />
+          </button>
+        </form>
+
+
+
+
+
+
+
+
+
+
 
         {/* Browse History */}
         <div className="flex flex-col gap-1 max-h-60 overflow-y-auto"></div>

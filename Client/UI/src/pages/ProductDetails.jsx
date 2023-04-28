@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavbarOne from "../components/NavbarOne";
 import Footer from "../components/Footer";
 import ResultCard from "../components/ResultCard";
+import { Box, Typography } from "@mui/material";
 import {
   Center,
   Grid,
@@ -30,6 +31,25 @@ const ProductDetails = () => {
     console.log(location.state.name);
   });
 
+  const [medicine, setMedicine] = useState([]);
+  const [loading, setloading] = useState(false);
+  const [Title, setTitle] = useState("");
+  const [pharmacy, setPharmacy] = useState("");
+ 
+
+  useEffect(() => {
+    returnMedicines();
+  }, []);
+
+  async function returnMedicines() {
+    let res = await fetch("http://13.40.153.119/allMedicines", {
+      method: "GET",
+    });
+
+    let med = await res.json();
+    console.log(med.properties);
+    setMedicine(med.properties);
+  }
 
   return (
     <main>
@@ -52,10 +72,11 @@ const ProductDetails = () => {
         <Grid cols={2} mx="auto">
 
           <Grid.Col span={5}>
-            <Card miw={240} mih={240} withBorder>
+            <Card w={260} h={335} withBorder>
               <Image
-                miw={240}
-                mih={240}
+                w={260}
+                h={335}
+                my="auto"
                 mx="auto"
                 radius="md"
                 src="https://cdn01.pharmeasy.in/dam/products/064425/ecosprin-75mg-strip-of-14-tablets-1-1647434835.jpg?dim=320x320&dpr=1&q=100"
@@ -206,14 +227,39 @@ const ProductDetails = () => {
 
       <Center maw={900} pt={30} pb={10} mx="auto">
         <SimpleGrid cols={4}>
-          <ResultCard />
-          <ResultCard />
-          <ResultCard />
-          <ResultCard />
+        {medicine.length == 0 ? (
+          <div
+          style={{
+            height: "60vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          >
+            <div>
+              <Box>
+                <Typography variant="h5">
+                  No medicine available
+                </Typography>
+              </Box>
+            </div>
+          </div>
+        ) : (
+          medicine.map((c) => {
+            return (
+              <ResultCard
+                Title={c.Title}
+                pharmacy={c.City}
+                id={c._id}
+                url={c.ImageUrl}
+                />
+            );
+          })
+        )}
         </SimpleGrid>
-      </Center>
-
-      <Footer />
+        </Center>
+        
+        <Footer />
     </main>
   );
 };
