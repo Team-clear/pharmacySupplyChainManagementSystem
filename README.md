@@ -14,7 +14,16 @@ Integration with suppliers' systems for real-time inventory tracking and order f
 Customizable notifications for order status updates
 Reporting and analytics for order history, inventory levels, and supplier performance
 
-![Screenshot (67)](https://user-images.githubusercontent.com/83478869/235125510-25be7b52-8665-4ac3-bbfa-0a4448482321.png)
+![Screenshot (68)](https://user-images.githubusercontent.com/83478869/235196132-96eacd83-86b5-4ba2-bc00-b74337f42d54.png)
+
+all products page
+![Screenshot (69)](https://user-images.githubusercontent.com/83478869/235196194-86c84c65-2994-422c-b602-782859b14244.png)
+
+product page
+![Screenshot (70)](https://user-images.githubusercontent.com/83478869/235196290-6b750b09-49d9-44b8-8001-2030dbb52f2d.png)
+
+vendor Dashboard
+![Screenshot (71)](https://user-images.githubusercontent.com/83478869/235196642-52b99679-49c5-40ab-a7a6-6da37449aa1d.png)
 
 
 
