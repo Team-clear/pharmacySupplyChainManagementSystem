@@ -41,7 +41,9 @@ const ResultCard = (props) => {
           fullWidth
           mt="md"
           radius="md"
-          onClick={() => navigate(`/productdetails`)}
+          onClick={() =>
+            navigate(`/productdetails`, { state: { id: `${props.id}` } })
+          }
         >
           View Offer
         </Button>

@@ -68,7 +68,9 @@ const allMeds = () => {
                 </div>
               ) : (
                 medicine.map((c) => {
-                  return <ResultCard Title={c.Title} pharmacy={c.City} />;
+                  return (
+                    <ResultCard Title={c.Title} pharmacy={c.City} id={c._id} />
+                  );
                 })
               )}
             </SimpleGrid>

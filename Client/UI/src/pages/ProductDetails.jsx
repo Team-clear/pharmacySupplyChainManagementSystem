@@ -17,8 +17,18 @@ import {
 } from "@mantine/core";
 import { useNavigate } from "react-router";
 
+import { useLocation } from "react-router";
+
 const ProductDetails = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  console.log("heyesvcvsdgdgshchs");
+
+  useEffect(() => {
+    console.log("hegshdgshd");
+    console.log(location.state.name);
+  });
 
   return (
     <main>

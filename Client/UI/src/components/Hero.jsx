@@ -59,7 +59,7 @@ const Hero = () => {
         />
 
         {/*  The system provides a
-        convenient and efficient way to purchase and ensure that they always
+        convenient a nd efficient way to purchase and ensure that they always
         have the medications with the best offer possible. */}
       </h2>
       <br />

@@ -34,7 +34,7 @@ const Demo = () => {
     setLoading(true);
     //`http://13.40.153.119/searchMedicine?Title=${}&City=${}`,
     let res = await fetch(
-      `http://localhost:8045/searchMedicine?Title=${medicine}`,
+      `http://13.40.153.119/searchMedicine?Title=${medicine}`,
       {
         method: "GET",
         headers: { "Content-type": "application/json" },

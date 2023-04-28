@@ -41,7 +41,7 @@ const SearchResults = () => {
   }
 
   async function returnMedicines() {
-    let res = await fetch("http://localhost:8045/allMedicines", {
+    let res = await fetch("http://13.40.153.119/allMedicines", {
       method: "GET",
     });
 
@@ -85,7 +85,9 @@ const SearchResults = () => {
                 </div>
               ) : (
                 searchedMed.map((c) => {
-                  return <ResultCard Title={c.Title} pharmacy={c.City} />;
+                  return (
+                    <ResultCard Title={c.Title} pharmacy={c.City} id={c._id} />
+                  );
                 })
               )}
             </SimpleGrid>
