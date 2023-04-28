@@ -3,6 +3,9 @@ import { createStyles, Navbar, Group, Code, getStylesRef, rem } from '@mantine/c
 import {
   IconBellRinging,
   IconFingerprint,
+  IconHome2,
+  IconUser,
+  IconDeviceDesktopAnalytics,
   IconKey,
   IconSettings,
   Icon2fa,
@@ -69,10 +72,10 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const data = [
-  { link: '', label: 'Home', icon: IconBellRinging },
+  { link: '', label: 'Home', icon: IconHome2 },
   { link: '', label: 'Offers', icon: IconReceipt2 },
-  { link: '', label: 'Update Inventory', icon: IconDatabaseImport },
-  { link: '', label: 'Profile', icon: Icon2fa },
+  { link: '', label: 'Update Inventory', icon: IconDeviceDesktopAnalytics },
+  { link: '', label: 'Profile', icon: IconUser },
   { link: '', label: 'Settings', icon: IconSettings },
 ];
 

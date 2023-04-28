@@ -1,46 +1,51 @@
 import React from 'react'
-import { Table , Button } from '@mantine/core';
+import { Table, Button } from '@mantine/core';
 
 const TableOne = () => {
 
-    const elements = [
-        { position: 6, mass: 12.011, symbol: 'C', name: 'Carbon' },
-        { position: 7, mass: 14.007, symbol: 'N', name: 'Nitrogen' },
-        { position: 39, mass: 88.906, symbol: 'Y', name: 'Yttrium' },
-        { position: 56, mass: 137.33, symbol: 'Ba', name: 'Barium' },
-        { position: 58, mass: 140.12, symbol: 'Ce', name: 'Cerium' },
-        { position: 58, mass: 140.12, symbol: 'Ce', name: 'Cerium' },
-        { position: 58, mass: 140.12, symbol: 'Ce', name: 'Cerium' },
-        { position: 58, mass: 140.12, symbol: 'Ce', name: 'Cerium' },
-        { position: 58, mass: 140.12, symbol: 'Ce', name: 'Cerium' },
-        { position: 58, mass: 140.12, symbol: 'Ce', name: 'Cerium' },
-      ];
+  const elements = [
+    { position: 6, mass: 230000, symbol: 'Temeke', name: 'Marvelous Medicines' },
+    { position: 7, mass: 120000, symbol: 'Natron', name: 'Panacea Prescriptions' },
+    { position: 39, mass: 6070000, symbol: 'Yombo dovya', name: 'Hale & Health Pharmacy' },
+    { position: 56, mass: 5870000, symbol: 'Tabata', name: 'Ailments & Antidotes' },
+    { position: 58, mass: 3270000, symbol: 'Central', name: 'QuickUp Prescriptions' },
+    { position: 6, mass: 230000, symbol: 'Temeke', name: 'Marvelous Medicines' },
+    { position: 7, mass: 120000, symbol: 'Natron', name: 'Panacea Prescriptions' },
+    { position: 39, mass: 6070000, symbol: 'Yombo dovya', name: 'Hale & Health Pharmacy' },
+    { position: 56, mass: 5870000, symbol: 'Tabata', name: 'Ailments & Antidotes' },
+    { position: 58, mass: 3270000, symbol: 'Central', name: 'QuickUp Prescriptions' },
+    { position: 6, mass: 230000, symbol: 'Temeke', name: 'Marvelous Medicines' },
+    { position: 7, mass: 120000, symbol: 'Natron', name: 'Panacea Prescriptions' },
+    { position: 39, mass: 6070000, symbol: 'Yombo dovya', name: 'Hale & Health Pharmacy' },
+    { position: 56, mass: 5870000, symbol: 'Tabata', name: 'Ailments & Antidotes' },
+    { position: 58, mass: 3270000, symbol: 'Central', name: 'QuickUp Prescriptions' },
+  ];
 
-      const rows = elements.map((element) => (
-        <tr key={element.name}>
-          <td>{element.position}</td>
-          <td>{element.name}</td>
-          <td>{element.symbol}</td>
-          <td>{element.mass}</td>
-          <td><Button variant="outline" color="green">Accept</Button></td>
-          <td><Button variant="outline" color="red">Decline</Button></td>
-        </tr>
-      ));
+  const rows = elements.map((element) => (
+    <tr key={element.name}>
+      <td>{element.name}</td>
+      <td>{element.position}</td>
+      <td>{element.symbol}</td>
+      <td>{element.mass}</td>
+      <td><Button variant="outline" color="green">Accept</Button></td>
+      <td><Button variant="outline" color="red">Decline</Button></td>
+    </tr>
+  ));
 
   return (
     <Table horizontalSpacing="md" verticalSpacing="xs" fontSize="md">
-    <thead>
-      <tr>
-        <th>Element position</th>
-        <th>Element name</th>
-        <th>Symbol</th>
-        <th>Atomic mass</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>{rows}</tbody>
-  </Table>
+      <thead>
+        <tr>
+          <th>Center name</th>
+          <th>Quantity</th>
+          <th>Location</th>
+          <th>Price</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </Table>
   )
 }
 
