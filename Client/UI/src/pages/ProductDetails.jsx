@@ -32,7 +32,7 @@ const ProductDetails = () => {
 
           <Grid.Col span={5}>
             <Card miw={240} mih={240} withBorder>
-              <Image miw={240} mih={240} mx="auto" radius="md" src="https://cdn01.pharmeasy.in/dam/products/064425/ecosprin-75mg-strip-of-14-tablets-1-1647434835.jpg?dim=320x320&dpr=1&q=100" alt="Random image" />
+              <Image maw={280} mah={300} mx="auto" radius="md" src="https://cdn01.pharmeasy.in/dam/products_otc/N48555/pharmeasy-vitamin-e-helps-reverse-skin-ageing-maintains-heart-eye-brain-health-bottle-of-60-2-1671743059.jpg" alt="Random image" />
             </Card>
           </Grid.Col>
 

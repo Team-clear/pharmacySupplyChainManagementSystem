@@ -10,7 +10,7 @@ const ResultCard = () => {
             <Card shadow="sm" padding="lg" radius="md" withBorder>
                 <Card.Section>
                     <Image
-                        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                        src="https://cdn01.pharmeasy.in/dam/products_otc/N48555/pharmeasy-vitamin-e-helps-reverse-skin-ageing-maintains-heart-eye-brain-health-bottle-of-60-2-1671743059.jpg"
                         height={160}
                         alt="Norway"
                     />
