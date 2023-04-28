@@ -20,7 +20,7 @@ const Hero = () => {
       </nav>
 
       <h1 className='head_text'>
-        medical supplies <br className='max-md:hidden' />
+        Medical Supplies <br className='max-md:hidden' />
         <span className='orange_gradient '>Management system</span>
       </h1>
       <h2 className='desc'>
