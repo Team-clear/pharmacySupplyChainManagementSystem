@@ -30,6 +30,7 @@ const ProductDetails = () => {
     console.log(location.state.name);
   });
 
+
   return (
     <main>
       <div className="main">
@@ -49,6 +50,7 @@ const ProductDetails = () => {
 
       <Center maw={1100} pt={30} pb={10} mx="auto">
         <Grid cols={2} mx="auto">
+
           <Grid.Col span={5}>
             <Card miw={240} mih={240} withBorder>
               <Image
@@ -59,6 +61,7 @@ const ProductDetails = () => {
                 src="https://cdn01.pharmeasy.in/dam/products/064425/ecosprin-75mg-strip-of-14-tablets-1-1647434835.jpg?dim=320x320&dpr=1&q=100"
                 alt="Random image"
               />
+
             </Card>
           </Grid.Col>
 

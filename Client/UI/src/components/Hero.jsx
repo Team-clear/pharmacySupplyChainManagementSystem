@@ -1,16 +1,16 @@
 import React from "react";
 import TypewriterComponent from "typewriter-effect";
-
-import { logo } from "../assets";
+import { logo, MediFlow } from "../assets";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router";
+
 
 const Hero = () => {
   const navigate = useNavigate();
   return (
     <header className="w-full flex justify-center items-center flex-col">
       <nav className="flex justify-between items-center w-full mb-10 pt-3">
-        <img src={logo} alt="sumz_logo" className="w-28 object-contain" />
+        <img src={MediFlow} alt='sumz_logo' className='w-28 object-contain' />
 
         <Box display="flex" justifyContent="space-between">
           <button
