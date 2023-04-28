@@ -86,7 +86,12 @@ const SearchResults = () => {
               ) : (
                 searchedMed.map((c) => {
                   return (
-                    <ResultCard Title={c.Title} pharmacy={c.City} id={c._id} />
+                    <ResultCard
+                      Title={c.Title}
+                      pharmacy={c.City}
+                      id={c._id}
+                      url={c.ImageUrl}
+                    />
                   );
                 })
               )}

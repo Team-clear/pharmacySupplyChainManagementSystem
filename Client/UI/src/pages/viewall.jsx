@@ -24,12 +24,12 @@ const allMeds = () => {
   }, []);
 
   async function returnMedicines() {
-    let res = await fetch("http://localhost:8045/allMedicines", {
+    let res = await fetch("http://13.40.153.119/allMedicines", {
       method: "GET",
     });
 
     let med = await res.json();
-    //console.log(med.properties);
+    console.log(med.properties);
     setMedicine(med.properties);
   }
   return (
@@ -69,7 +69,12 @@ const allMeds = () => {
               ) : (
                 medicine.map((c) => {
                   return (
-                    <ResultCard Title={c.Title} pharmacy={c.City} id={c._id} />
+                    <ResultCard
+                      Title={c.Title}
+                      pharmacy={c.City}
+                      id={c._id}
+                      url={c.ImageUrl}
+                    />
                   );
                 })
               )}
