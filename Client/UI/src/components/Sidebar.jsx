@@ -100,7 +100,7 @@ const Sidebar = () => {
   ));
 
   return (
-    <Navbar height={700} width={{ sm: 300 }} p="md">
+    <Navbar height={1500} width={{ sm: 300 }} p="md">
       <Navbar.Section grow>
         {links}
       </Navbar.Section>
